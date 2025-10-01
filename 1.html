@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background: linear-gradient(120deg, #f6d365, #fda085);
+        }
+
+        .birthdaycake {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            top: 101px;
+            left: 579px;
+        }
+
+        .candle {
+            position: relative;
+            top: -389px;
+            left: 92px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+
+        .candle-label input:checked+.candle {
+            opacity: 0;
+        }
+
+        .text {
+            display: none;
+            font-size: 55px;
+            position: relative;
+
+
+        }
+
+        .candle-label input:checked+.candle~.text {
+            display: flex;
+            top: -345px;
+            left: 623px;
+        }
+
+        .balloon1 {
+            position: absolute;
+            display:none ;
+            left: 1219px;
+            top: 665px;
+
+
+        }
+
+        .candle-label input:checked+.candle~.balloon1 {
+            display: block;
+            animation: floatup 6s linear infinite;
+            
+
+        }
+
+
+
+        .balloon2 {
+            position: absolute;
+            left: -22px;
+            top: 757px;
+            display:none ;
+        }
+
+        .candle-label input:checked+.candle~.balloon2 {
+            display: block;
+            animation: floatup 6s linear infinite;
+            
+        }
+
+        .balloon3 {
+            position: absolute;
+            left: 1622px;
+            top: 631px;
+            display:none ;
+
+        }
+
+        .candle-label input:checked+.candle~.balloon3 {
+            display: block;
+            animation: floatup 6s linear infinite;
+            
+        }
+
+        .balloon4 {
+            position: absolute;
+            left: 392px;
+            top: 695px;
+            display:none ;
+
+        }
+
+        .candle-label input:checked+.candle~.balloon4 {
+            display: block;
+            animation: floatup 6s linear infinite;
+            
+        }
+
+        @keyframes floatup {
+            0% {
+                transform: translateY(0)scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(-854px) scale(1);
+                opacity: 1;
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <img src="assets/cake.png" alt="cake" width="759px" class="birthdaycake">
+
+    <label class="candle-label">
+        <input type="checkbox" hidden>
+
+        <img src="assets/candle.png" alt="hover over me" width="200px" class="candle">
+
+
+        <img src="assets/balloon 1.png" class="balloon1" width="350px">
+        <img src="assets/balloon 2.png" class="balloon2" width="400px">
+        <img src="assets/balloon 3.png" class="balloon3" width="350px">
+        <img src="assets/balloon 4.png" class="balloon4" width="350px">
+
+
+        <span class="text">
+
+            <a href="2.html">Click here for Surprise!</a>
+
+
+        </span>
+
+
+
+    </label>
+
+
+    <div class="bgm">
+        <audio src="assets/happy_birthday.mp3" autoplay></audio>
+    </div>
+
+
+
+
+</body>
+
+</html>

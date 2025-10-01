@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo & Video Slider</title>
+  <link rel="stylesheet" href="style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <style>
+     div{
+            font-family: "Sour Gummy", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+        }
+
+    body {
+        
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      
+      margin: 0;
+    }
+    .slider {
+      position: relative;
+      width: 80%;
+      max-width: 700px;
+      
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      
+     
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .prev { left: -50px; }
+    .next { right: -50px; }
+  </style>
+</head>
+<body>
+    <div class="text">
+        Cheers to 17 yearsss Manuuu!!🥂
+
+    </div>
+  <div class="slider">
+    <!-- 13 Photos -->
+    <img src="assets/photo1.jpg" class="slides">
+    <img src="assets/photo2.jpg" class="slides">
+    <img src="assets/photo3.jpg" class="slides">
+    <img src="assets/photo4.jpg" class="slides">
+    <img src="assets/photo5.jpg" class="slides">
+    <img src="assets/photo6.jpg" class="slides">
+    <img src="assets/photo7.jpg" class="slides">
+    <img src="assets/photo8.jpg" class="slides">
+    <img src="assets/photo9.jpg" class="slides">
+    <img src="assets/photo10.jpg" class="slides">
+    <img src="assets/photo11.jpg" class="slides">
+    <img src="assets/photo12.jpg" class="slides">
+    <img src="assets/photo13.jpg" class="slides">
+
+    <!-- 1 Video -->
+    
+
+    <!-- Navigation Buttons -->
+    <button class="btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="btn next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementsByClassName("slides");
+
+    function showSlide(n) {
+      if (n >= slides.length) index = 0;
+      if (n < 0) index = slides.length - 1;
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        if (slides[i].tagName === "VIDEO") slides[i].pause(); // pause video when hidden
+      }
+      slides[index].style.display = "block";
+    }
+
+    function changeSlide(n) {
+      index += n;
+      showSlide(index);
+    }
+
+    // Show first slide
+    showSlide(index);
+  </script>
+</body>
+</html>

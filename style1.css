@@ -1,0 +1,24 @@
+.text {
+margin: 0;
+padding: 0;
+font-family: "Sour Gummy", sans-serif;
+font-weight: 800;
+
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+border: 5px solid #fff;
+width: fit-content;
+background: linear-gradient(45deg, #FFB347, #FFCC33); /* Orange-Gold Gradient */
+color: #222;
+
+}
+
+body{
+    overflow: hidden;
+    
+}
